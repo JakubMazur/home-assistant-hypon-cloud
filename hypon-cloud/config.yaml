@@ -1,0 +1,28 @@
+name: "Hypon Cloud"
+description: "Integrate Hypon Cloud with Home Assistant"
+url: "https://github.com/amckee23/home-assistant-hypon-cloud"
+version: "1.0.7"
+slug: "hypon_cloud_integration"
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+startup: application
+boot: auto
+homeassistant_api: true
+hassio_api: true
+hassio_role: manager
+stdin: true
+init: false
+options:
+  username: "replace_me"
+  password: "replace_me"
+  refresh_time: 300
+  system_id: "replace_me"
+schema:
+  username: str
+  password: password
+  system_id: str
+  refresh_time: int(60,3600)
