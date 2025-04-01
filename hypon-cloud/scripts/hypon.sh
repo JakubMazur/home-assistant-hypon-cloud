@@ -50,3 +50,23 @@ retrieveSolarData () {
                               -H "authorization: Bearer $authToken")
     echo $dataRequest
 }
+
+# ------------------------------------------------------------------------------
+# Retrieve real time solar data from the Hypon Cloud Platform
+#
+# Arguments
+#  $1 The authentication token to use
+# ------------------------------------------------------------------------------
+retrieveRealTimeSolarData () {
+  local authToken=${1}
+  local system_id
+  local dataUrl
+  local dataRequest
+
+    system_id=$(bashio::config 'system_id')
+    dataUrl="$HYPON_URL/plant/$system_id/monitor?refresh=true"
+    dataRequest=$(curl -s "$dataUrl" \
+                              -H "$ACCEPT_HEADER" \
+                              -H "authorization: Bearer $authToken")
+    echo $dataRequest
+}

@@ -18,8 +18,15 @@ This repository contains a Hypon cloud integration for Home Assistant.  This is 
 
 ## Sensors 
 The following sensors are available once the addon is installed:
+
+### Daily Sensors
 - `sensor.solar_generated_today` - The amount of solar energy generated today
 - `sensor.grid_import_today` - The amount of energy imported from the grid today
 - `sensor.grid_export_amount` - The amount of energy exported to the grid today
 - `sensor.energy_consumption_today` - The total energy consumption today
 - `sensor.solar_used_today` - The total amount of solar energy used today
+
+### Real Time Sensors
+- `sensor.solar_energy_now` - The amount of solar energy generated in real time
+- `sensor.grid_import_now` - The amount of energy imported from the grid in real time
+- `sensor.solar_used_now` - The amount of solar energy used in real time
