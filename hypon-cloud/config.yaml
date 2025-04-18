@@ -1,7 +1,7 @@
 name: "Hypon Cloud"
 description: "Integrate Hypon Cloud with Home Assistant"
 url: "https://github.com/amckee23/home-assistant-hypon-cloud"
-version: "1.0.8"
+version: "1.0.9"
 slug: "hypon_cloud_integration"
 arch:
   - armhf
@@ -13,7 +13,7 @@ startup: application
 boot: auto
 homeassistant_api: true
 hassio_api: true
-hassio_role: manager
+hassio_role: homeassistant
 stdin: true
 init: false
 options:

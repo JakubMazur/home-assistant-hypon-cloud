@@ -1,12 +1,14 @@
 # Hypon Cloud Addon for Home Assistant
 
-This repository contains a Hypon cloud integration for Home Assistant.  This is provided without warrenty and is based on personal use only.
+This repository contains a Hypon cloud integration for Home Assistant.  This is provided without warranty and is for personal use only.
 
 ## Installation
-1.) Clone this repository locally
+1.) Clone this repository to your local machine:
+git clone https://github.com/amckee23/home-assistant-hypon-cloud hypon_cloud
+cd into the hypon_cloud folder
 
 2.) from the top level of the repository run `scp -r -O hypon-cloud [user]@[ip]:/addons`
-    Note:: Please ensure you have the ssh plugin installed with sftp enabled.
+    Note:: Please ensure you have the ssh plugin installed in home assistant with sftp enabled.  Instructions can be found [here](https://community.home-assistant.io/t/home-assistant-community-add-on-ssh-web-terminal/33820)
 
 3.) Navigate in your Home Assistant frontend to **Settings** -> **Add-ons** -> **Add-on Store** -> **Select 3 button menu** -> **Check for updates** 
 
