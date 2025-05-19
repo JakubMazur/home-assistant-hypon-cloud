@@ -24,10 +24,15 @@ loginHypon () {
     password=$(bashio::config 'password')
     loginData=$(echo "$LOGIN_TEMPLATE" | jq .username="\"$username\"" | jq .password="\"$password\"")
 
+    bashio::log.info "Login Start"
+
     loginResponse=$(curl -s "$HYPON_URL/login" \
       -H "$ACCEPT_HEADER" \
       -H "$CONTENT_HEADER" \
+      -H 'User-Agent: Mozilla/5.0' \
       --data-raw "$loginData")
+
+      bashio::log.info "Login End"
       echo $loginResponse | jq -r '.data.token'
 }
 
@@ -45,9 +50,15 @@ retrieveSolarData () {
 
     system_id=$(bashio::config 'system_id')
     dataUrl="$HYPON_URL/plant/$system_id/energy2?day=$(date +%d)&month=$(date +%m)&type=day&year=$(date +%Y)"
+
+        bashio::log.info "Load Solar Data Start"
+
     dataRequest=$(curl -s "$dataUrl" \
                               -H "$ACCEPT_HEADER" \
+                              -H 'User-Agent: Mozilla/5.0' \
                               -H "authorization: Bearer $authToken")
+
+        bashio::log.info "Load Solar Data End"
     echo $dataRequest
 }
 
@@ -63,10 +74,15 @@ retrieveRealTimeSolarData () {
   local dataUrl
   local dataRequest
 
+    bashio::log.info "Load Realtime Start"
+
     system_id=$(bashio::config 'system_id')
     dataUrl="$HYPON_URL/plant/$system_id/monitor?refresh=true"
     dataRequest=$(curl -s "$dataUrl" \
                               -H "$ACCEPT_HEADER" \
+                              -H 'User-Agent: Mozilla/5.0' \
                               -H "authorization: Bearer $authToken")
+
+    bashio::log.info "Load Realtime Data End"
     echo $dataRequest
 }

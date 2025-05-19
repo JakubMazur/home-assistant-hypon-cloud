@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.1.0
+- Adding User Agent String
+- 
 ## 1.0.9
 - Added Change log
 - Refactored variables to a separate file for readability 
