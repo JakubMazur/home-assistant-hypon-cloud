@@ -3,6 +3,17 @@
 This repository contains a Hypon cloud integration for Home Assistant.  This is provided without warranty and is for personal use only.
 
 ## Installation
+
+Method 1: Add-on Repository
+1.	In Home Assistant go to: Settings → Add-ons → Add-on store → ⋮ → Repositories
+2.	Paste this URL:
+```https://github.com/amckee23/home-assistant-hypon-cloud```
+3. Find **Hypon Cloud** under “Local Add-ons” (or the repo name) and click **Install**.
+
+[![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Famckee23%2Fhome-assistant-hypon-cloud)
+
+Method 2: Manual Installation
+
 1.) Clone this repository to your local machine:
 git clone https://github.com/amckee23/home-assistant-hypon-cloud hypon_cloud
 cd into the hypon_cloud folder
